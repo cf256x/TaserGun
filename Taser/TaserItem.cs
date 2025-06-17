@@ -54,6 +54,7 @@ namespace Taser
             if (ev.Player.IsScp && ev.Player.Role.Type != PlayerRoles.RoleTypeId.Scp049) return;
             if (ev.Player == null || ev.Attacker == null) return;
 
+            ev.Amount = 0f;
             ev.Player.EnableEffect(Exiled.API.Enums.EffectType.Slowness, 50, 10);
             ev.Player.EnableEffect(Exiled.API.Enums.EffectType.Flashed, 1, 1);
 
